@@ -62,3 +62,15 @@ echo ./Templates ./Documents | xargs -n 1 cp -v ./Downloads/a.txt
 # -I set the place holder
 find . -name "*.bak" -print0 | xargs -0 -I {} mv {} ~/old.files
 ```
+go run -gcflags '-m -l'
+
+# fzf
+$ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+$ ~/.fzf/install
+
+# install fzf in vim
+cd ~/.vim/bundle/
+git clone https://github.com/junegunn/fzf.vim
+git clone https://github.com/junegunn/fzf
+
+
