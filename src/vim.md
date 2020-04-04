@@ -73,3 +73,11 @@ augroup Racer
     autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
 augroup END
 ```
+
+# File browsing
+```text
+let g:netrw_banner=0
+let g:netrw_liststyle=3
+```
+:edit . //navigate the folder, use enter to into the sub folder
+use o/v to open the file in different window
