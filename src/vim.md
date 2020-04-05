@@ -1,41 +1,54 @@
 # Verbs
+- x "delete the character
+- r "replace the character
+- s "delete the character and move to insert mode
 - d
-- D # delete from current pos to end of line
+- D "delete from current pos to end of line
 - c
-- C # change from current pos to end of line
+- C "change from current pos to end of line
 - y
-- Y # yank one line
-- >
+- Y "yank one line
+- > "ident
 - <
-- . # repeat last action
+- . "repeat last action
 
-# Preposition (used with verbs)
-- i # inside
-- a # around
+# Nouns 
+## Preposition
+- i "inside
+  - iw, it, i", ip
+- a "around
+  - ap
 
-# Move
+## Move 
 - h,j,k,l
 - w,e,b
 - W,E,B(ignore all non-whitespace character including '-',',' etc) 
 - 0
 - $ 
-- ( # begin of sentence
-- ) # end of sentence
+- ( " begin of sentence
+- ) " end of sentence
+- H(high),M(middle),L(low)
 
-# Search
-- /regex  # search next instance
-- n
-- N
-- t
-- T
-- f
-- F
+## move Command
+5,7m0 "move line from 5 to 7 to the beginning of the file
+m+1   "move current line down one line
+
+## Search/Parameterized Text objects
+- /regex  "search next instance, d/foo d?bar
+- t, T
+- f, F
+- n, N
+
+# Line number
+- Absolute line number, set nu!
+- Relateive line number, set rnu!
+- Hybrid line number, set nu! rnu!
 
 # Block view mode inserting
 ctrl-v into block mode (the cursor place will be the insert place)
 select the lines wants to insert
 shift-i into insert mode, then insert what you want
-use esc come back to normal mode 
+press esc twice which will apply changes to all lines
 
 # copy selection to clipboard
 //select all the text want to copy
