@@ -28,6 +28,7 @@
 - ( " begin of sentence
 - ) " end of sentence
 - H(high),M(middle),L(low)
+- v " before move will flip the inclusive/exclusive of the move
 
 ## move Command
 5,7m0 "move line from 5 to 7 to the beginning of the file

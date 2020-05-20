@@ -72,5 +72,3 @@ $ ~/.fzf/install
 cd ~/.vim/bundle/
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/junegunn/fzf
-
-
