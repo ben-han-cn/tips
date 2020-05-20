@@ -38,3 +38,5 @@ Git will periodically clean up objects which are unreachable. Your reflogs is
 yours and yours alone. Once get the commit `git reset --hard <SHA>` and 
 `git checkout <SHA> -- <filename>` could be used to recover the data.
 
+## Set remote urls
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
