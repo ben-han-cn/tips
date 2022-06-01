@@ -40,3 +40,4 @@ yours and yours alone. Once get the commit `git reset --hard <SHA>` and
 
 ## Set remote urls
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+git config --global core.sshCommand "ssh -i ~/.ssh/github.id_rsa -F /dev/null" //specify which key to use
