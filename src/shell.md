@@ -72,3 +72,62 @@ $ ~/.fzf/install
 cd ~/.vim/bundle/
 git clone https://github.com/junegunn/fzf.vim
 git clone https://github.com/junegunn/fzf
+
+# awk
+awk '{action}' filename
+awk 'pattern' filename                  // awk -F: '$1 ~ /e$/' yang.txt
+awk 'pattern {action}' filename         // awk -F: '$1 ~ /e$/ {print $2}' yang.txt
+awk script
+```awk
+#!/usr/bin/awk -f
+
+BEING {
+     # set the input separators
+     FS=':'
+     # define a word cound
+     words=0
+}
+{
+     # add a record, NF stands for field count and $NF stands for last field
+     words=words+NF
+     print NF
+}
+END {
+     # print the result
+     print words " words.\n"
+}
+```
+
+# management file permission
+chown -R ben /var/www/my-websit.com/
+chgrp -R www-data /var/www/my-websit.com/
+chmod -R 750 /var/www/my-websit.com/
+//new file will inherit the group ownership of parent folder
+chmod g+s /var/www/my-websit.com/
+
+# generate ssh key
+```shell
+ssh-keygen -t rsa -b 4096
+ssh-copy-id -i public-key-file user@host
+```
+
+# split file
+```shell
+split -b 180m golang-arm.tar.gz golang-arm.tar.gz.
+cat golang-arm.tar.gz.* > golang-arm.tar.gz
+```
+
+# enable core dump
+```shell
+ulimit -S -c unlimited
+sudo sysctl -w kernel.core_pattern=/tmp/core.%u.%p.%t
+```
+
+# User management
+```shell
+sudo passwd -l[-u] user-name  #(un)block user
+sudo getent group  #display groups
+sudo getent group  groupname #display one group
+sudo gpasswd -a user groupname #add user to group
+```
+
