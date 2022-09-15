@@ -131,3 +131,16 @@ sudo getent group  groupname #display one group
 sudo gpasswd -a user groupname #add user to group
 ```
 
+# Shell runtime parameter
+## `set -x` 
+Is used to output the line of command executed before the result, with + at the beginning of the line to indicate that it is a command instead of a command output, and the arguments of each command will be expanded
+
+## `set -u`
+when it encounters a non-existent variable it will report an error and stop execution
+
+## `set -e`
+making the script terminate whenever an error occurs.
+
+## `trap`
+catch the corresponding signal and restore it accordingly.
+`trap "rm -f $lockfile; exit" INT TERM EXIT`
