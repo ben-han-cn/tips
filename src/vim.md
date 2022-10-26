@@ -11,7 +11,8 @@
 - > "ident
 - <
 - . "repeat last action
-
+- g; "jump to last change you made
+- g, "jump back forward through the change list
 # Nouns 
 ## Preposition
 - i "inside
@@ -31,7 +32,7 @@
 - v " before move will flip the inclusive/exclusive of the move
 
 ## move Command
-5,7m0 "move line from 5 to 7 to the beginning of the file
+5,7m0 "move line from 5 to 7 to the beginning of the file.   
 m+1   "move current line down one line
 
 ## Search/Parameterized Text objects
