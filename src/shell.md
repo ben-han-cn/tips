@@ -144,3 +144,14 @@ making the script terminate whenever an error occurs.
 ## `trap`
 catch the corresponding signal and restore it accordingly.
 `trap "rm -f $lockfile; exit" INT TERM EXIT`
+
+# Loop device
+create a special block device by which they can map a normal file to a virtual block device.
+```shell
+$ dd if=/dev/zero of=blockfile bs=1M count=5120
+$ sudo losetup /dev/loop0 blockfile //sudo losetup -f blockfile to avoid device file conflict
+$ sudo parted -s /dev/loop1 mklabel msdos
+$ sudo parted -s /dev/loop1 mkpart primary 1MiB 100%
+$ sudo mkfs.ext4 /dev/loop1p1
+$ sudo mount /dev/loop1p1 /mnt
+```
