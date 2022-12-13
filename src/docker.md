@@ -1,8 +1,10 @@
 # reclaim disk space
 ```shell
+docker rmi $(docker images -f "dangling=true" -q) //image without tag
 docker container prune -f
 docker volume prune -f
 docker image prune -ff
+docker system prune -a //dangling network, images and build cache
 ```
 
 # compile in docker
