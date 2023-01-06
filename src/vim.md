@@ -96,3 +96,50 @@ let g:netrw_liststyle=3
 ```
 :edit . //navigate the folder, use enter to into the sub folder
 use o/v to open the file in different window
+
+# rust dev env
+- rust.vim
+```shell
+vim ~/.vimrc
+
+syntax enable
+filetype plugin indent on
+git clone https://github.com/rust-lang/rust.vim ~/.vim/pack/plugins/start/rust.vim
+```
+- rust-analyzer
+```shell
+rustup component add rust-analyzer
+```
+- nvm — node
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+nvm install node
+```
+- vim-plug
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+vim ~/.vimrc
+
+call plug#begin()
+call plug#end()
+```
+- coc.nvim
+```shell
+vim ~/.vimrc
+
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+vim
+
+:PlugInstall
+```
+
+- coc-rust-analyzer
+```shell
+vim
+
+:CocInstall coc-rust-analyzer
+```
