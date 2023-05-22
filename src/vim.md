@@ -143,3 +143,10 @@ vim
 
 :CocInstall coc-rust-analyzer
 ```
+- disable type hit
+```shell
+:CocConfig
+"rust-analyzer.inlayHints.chainingHints": false,
+"rust-analyzer.inlayHints.typeHints": fale,
+"rust-analyzer.inlayHints.parameterHints": false
+```
