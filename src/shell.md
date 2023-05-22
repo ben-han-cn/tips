@@ -155,3 +155,10 @@ $ sudo parted -s /dev/loop1 mkpart primary 1MiB 100%
 $ sudo mkfs.ext4 /dev/loop1p1
 $ sudo mount /dev/loop1p1 /mnt
 ```
+
+# zsh
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
+```
