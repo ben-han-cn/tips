@@ -53,8 +53,10 @@ shift-i into insert mode, then insert what you want
 press esc twice which will apply changes to all lines
 
 # copy selection to clipboard
-//select all the text want to copy
+//select all the text want to copy      
+```text
 w !pbcopy
+```
 
 # find file 
 in vimrc
